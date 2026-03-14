@@ -56,7 +56,7 @@ Responde ÚNICAMENTE con un JSON válido, sin markdown, sin backticks, sin texto
     const data = await response.json();
 
     if (!response.ok) {
-      return res.status(500).json({ error: data.error?.message || 'Error de API' });
+      return res.status(500).json({ error: data.error?.message || 'Error de API', detail: data });
     }
 
     const text = data.content.map(i => i.text || '').join('');

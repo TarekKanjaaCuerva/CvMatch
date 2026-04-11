@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9577192747616184" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRZ2ZWPS6L"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XRZ2ZWPS6L');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Generador de CV con IA gratis — AnalizaCV</title>
+  <meta name="description" content="Crea tu CV profesional gratis con inteligencia artificial. Responde unas preguntas y obtén un CV optimizado para ATS listo para usar en segundos."/>
+  <meta name="robots" content="index,follow"/>
+  <link rel="canonical" href="https://analizacv.com/generar-cv"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <meta property="og:title" content="Generador de CV con IA gratis — AnalizaCV"/>
+  <meta property="og:description" content="Crea tu CV profesional con IA en segundos. Gratis, sin registro."/>
+  <meta property="og:url" content="https://analizacv.com/generar-cv"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Generador de CV con IA","url":"https://analizacv.com/generar-cv","description":"Genera tu CV profesional gratis con inteligencia artificial","applicationCategory":"BusinessApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":"es"}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --green:#1D9E75;--green-dark:#0F6E56;--green-darkest:#085041;
+      --green-light:#E1F5EE;--bg:#F8F7F4;--surface:#FFFFFF;
+      --border:rgba(0,0,0,0.1);--text:#1a1a18;--text-muted:#6b6b67;
+      --text-hint:#9a9a96;--radius-md:8px;--radius-lg:12px;
+    }
+    @media(prefers-color-scheme:dark){
+      :root{--bg:#141413;--surface:#1e1e1c;--border:rgba(255,255,255,0.1);
+      --text:#f0ede8;--text-muted:#9a9a96;--text-hint:#6b6b67;
+      --green-light:#04342C;}
+    }
+    html{font-size:16px;}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;}
+    .container{max-width:720px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+
+    /* NAV */
+    .nav-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;}
+    .logo{font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:-0.03em;}
+    .logo span{color:var(--green);}
+    .nav-link{font-size:0.85rem;color:var(--text-hint);text-decoration:none;}
+    .nav-link:hover{color:var(--green);}
+
+    /* HEADER */
+    .page-header{margin-bottom:2rem;}
+    .page-tag{display:inline-block;font-size:0.72rem;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:var(--green);margin-bottom:0.5rem;}
+    h1{font-family:'Outfit',sans-serif;font-size:1.9rem;font-weight:700;letter-spacing:-0.03em;margin-bottom:0.5rem;line-height:1.2;}
+    .page-subtitle{font-size:0.95rem;color:var(--text-muted);}
+
+    /* PROGRESS */
+    .progress-bar{display:flex;gap:0.4rem;margin-bottom:2rem;}
+    .progress-step{height:4px;border-radius:2px;flex:1;background:var(--border);transition:background 0.3s;}
+    .progress-step.active{background:var(--green);}
+    .progress-step.done{background:var(--green-dark);}
+    .step-label{font-size:0.75rem;color:var(--text-hint);margin-bottom:1rem;}
+
+    /* FORM */
+    .step{display:none;}
+    .step.active{display:block;}
+    .card{background:var(--surface);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1rem;}
+    .field{margin-bottom:1.25rem;}
+    .field:last-child{margin-bottom:0;}
+    label{display:block;font-size:0.82rem;font-weight:500;color:var(--text);margin-bottom:0.4rem;}
+    .label-hint{font-size:0.75rem;color:var(--text-hint);font-weight:400;margin-left:0.3rem;}
+    input[type="text"],textarea,select{width:100%;padding:0.7rem 0.9rem;border:0.5px solid var(--border);border-radius:var(--radius-md);background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.15s;}
+    input[type="text"]:focus,textarea:focus,select:focus{border-color:var(--green);}
+    textarea{resize:vertical;min-height:100px;line-height:1.6;}
+    select{cursor:pointer;}
+
+    /* TONE SELECTOR */
+    .tone-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;}
+    .tone-option{border:0.5px solid var(--border);border-radius:var(--radius-md);padding:0.7rem;text-align:center;cursor:pointer;transition:border-color 0.15s,background 0.15s;}
+    .tone-option:hover{border-color:var(--green);}
+    .tone-option.selected{border-color:var(--green);background:var(--green-light);}
+    .tone-name{font-size:0.82rem;font-weight:500;color:var(--text);}
+    .tone-desc{font-size:0.7rem;color:var(--text-hint);margin-top:2px;}
+
+    /* BUTTONS */
+    .btn-row{display:flex;gap:0.75rem;margin-top:1.5rem;}
+    .btn-primary{flex:1;padding:0.9rem;background:var(--green);color:white;border:none;border-radius:var(--radius-md);font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:500;cursor:pointer;transition:background 0.2s;}
+    .btn-primary:hover{background:var(--green-dark);}
+    .btn-primary:disabled{background:var(--border);color:var(--text-hint);cursor:not-allowed;}
+    .btn-secondary{padding:0.9rem 1.25rem;background:transparent;border:0.5px solid var(--border);border-radius:var(--radius-md);font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--text-muted);cursor:pointer;transition:border-color 0.15s;}
+    .btn-secondary:hover{border-color:var(--green);color:var(--green);}
+
+    /* RESULT */
+    .result-section{display:none;}
+    .result-section.visible{display:block;}
+    .result-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:0.75rem;}
+    .result-title{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:600;color:var(--text);}
+    .result-actions{display:flex;gap:0.5rem;}
+    .btn-copy,.btn-download{padding:0.55rem 1rem;border-radius:var(--radius-md);font-size:0.82rem;font-weight:500;cursor:pointer;transition:all 0.15s;font-family:'DM Sans',sans-serif;}
+    .btn-copy{background:var(--green);color:white;border:none;}
+    .btn-copy:hover{background:var(--green-dark);}
+    .btn-download{background:transparent;border:0.5px solid var(--border);color:var(--text-muted);}
+    .btn-download:hover{border-color:var(--green);color:var(--green);}
+    .cv-output{background:var(--surface);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;white-space:pre-wrap;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--text);line-height:1.8;max-height:600px;overflow-y:auto;}
+    .copy-toast{font-size:0.78rem;color:var(--green);text-align:center;margin-top:0.5rem;display:none;}
+    .copy-toast.visible{display:block;}
+
+    /* ANALYZE CTA */
+    .analyze-cta{background:var(--green-light);border-radius:var(--radius-lg);padding:1.25rem;margin-top:1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .analyze-cta p{font-size:0.88rem;color:var(--green-darkest);margin:0;}
+    .analyze-cta a{background:var(--green);color:white;padding:0.55rem 1.1rem;border-radius:var(--radius-md);text-decoration:none;font-family:'Outfit',sans-serif;font-weight:500;font-size:0.85rem;white-space:nowrap;}
+
+    /* ERROR */
+    .error-msg{background:#FCEBEB;color:#791F1F;padding:0.9rem 1.2rem;border-radius:var(--radius-md);font-size:0.875rem;margin-bottom:1rem;display:none;}
+    .error-msg.visible{display:block;}
+
+    /* LOADING */
+    .loading-state{text-align:center;padding:3rem 1rem;display:none;}
+    .loading-state.visible{display:block;}
+    .spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--green);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 1rem;}
+    @keyframes spin{to{transform:rotate(360deg);}}
+    .loading-text{font-size:0.95rem;color:var(--text-muted);}
+
+    /* NEW CV BTN */
+    .new-cv-btn{width:100%;margin-top:1rem;padding:0.75rem;background:transparent;border:0.5px solid var(--border);border-radius:var(--radius-md);font-family:'DM Sans',sans-serif;font-size:0.875rem;color:var(--text-muted);cursor:pointer;transition:all 0.15s;}
+    .new-cv-btn:hover{border-color:var(--green);color:var(--green);}
+
+    footer{text-align:center;margin-top:3rem;font-size:0.78rem;color:var(--text-hint);}
+    a.fl{color:var(--text-hint);text-decoration:none;}
+    @media(max-width:560px){.tone-grid{grid-template-columns:1fr 1fr;}.btn-row{flex-direction:column;}}
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="nav-bar">
+    <a class="logo" href="/">Analiza<span>CV</span></a>
+    <a class="nav-link" href="/">← Analizar CV</a>
+  </div>
+
+  <div class="page-header">
+    <div class="page-tag">Herramienta gratuita</div>
+    <h1>Generador de CV con IA</h1>
+    <p class="page-subtitle">Responde unas preguntas y obtén un CV profesional optimizado para ATS en segundos. Gratis y sin registro.</p>
+  </div>
+
+  <div class="progress-bar" id="progressBar">
+    <div class="progress-step active" id="ps1"></div>
+    <div class="progress-step" id="ps2"></div>
+    <div class="progress-step" id="ps3"></div>
+    <div class="progress-step" id="ps4"></div>
+  </div>
+  <div class="step-label" id="stepLabel">Paso 1 de 4 — Información básica</div>
+
+  <div class="error-msg" id="errorMsg"></div>
+
+  <!-- STEP 1: Info básica -->
+  <div class="step active" id="step1">
+    <div class="card">
+      <div class="field">
+        <label>Nombre completo <span style="color:#E24B4A">*</span></label>
+        <input type="text" id="nombre" placeholder="Ej: María García López"/>
+      </div>
+      <div class="field">
+        <label>Puesto al que aspiras <span style="color:#E24B4A">*</span></label>
+        <input type="text" id="puesto" placeholder="Ej: Desarrolladora Frontend, Marketing Manager..."/>
+      </div>
+      <div class="field">
+        <label>Años de experiencia <span class="label-hint">(opcional)</span></label>
+        <select id="experienciaAnos">
+          <option value="">Selecciona...</option>
+          <option value="Sin experiencia (recién graduado)">Sin experiencia (recién graduado)</option>
+          <option value="Menos de 1 año">Menos de 1 año</option>
+          <option value="1-2 años">1-2 años</option>
+          <option value="3-5 años">3-5 años</option>
+          <option value="5-10 años">5-10 años</option>
+          <option value="Más de 10 años">Más de 10 años</option>
+        </select>
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-primary" onclick="goToStep(2)">Siguiente →</button>
+    </div>
+  </div>
+
+  <!-- STEP 2: Experiencia y formación -->
+  <div class="step" id="step2">
+    <div class="card">
+      <div class="field">
+        <label>Experiencia laboral <span class="label-hint">(opcional — déjalo vacío si no tienes)</span></label>
+        <textarea id="experiencia" placeholder="Ej: Desarrolladora Frontend en StartupXYZ (2021-2024): desarrollo de interfaces con React y TypeScript.&#10;&#10;Si no tienes experiencia laboral, déjalo vacío y la IA adaptará el CV a tu perfil."></textarea>
+      </div>
+      <div class="field">
+        <label>Formación académica <span class="label-hint">(opcional)</span></label>
+        <textarea id="formacion" placeholder="Ej: Grado en Ingeniería Informática — Universidad Complutense de Madrid (2023, en curso)&#10;Bootcamp de Desarrollo Web — The Bridge (2022)" style="min-height:80px;"></textarea>
+      </div>
+      <div class="field">
+        <label>Prácticas universitarias <span class="label-hint">(opcional)</span></label>
+        <textarea id="practicas" placeholder="Ej: Prácticas en Empresa XYZ (2024): apoyo al equipo de marketing digital, gestión de redes sociales, análisis de métricas con Google Analytics." style="min-height:80px;"></textarea>
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-secondary" onclick="goToStep(1)">← Atrás</button>
+      <button class="btn-primary" onclick="goToStep(3)">Siguiente →</button>
+    </div>
+  </div>
+
+  <!-- STEP 3: Habilidades e info extra -->
+  <div class="step" id="step3">
+    <div class="card">
+      <div class="field">
+        <label>Habilidades técnicas y blandas <span class="label-hint">(separadas por comas)</span></label>
+        <textarea id="habilidades" placeholder="Ej: React, TypeScript, JavaScript, HTML, CSS, Git, Figma, Scrum, trabajo en equipo, comunicación efectiva, resolución de problemas" style="min-height:80px;"></textarea>
+      </div>
+      <div class="field">
+        <label>Idiomas <span class="label-hint">(opcional)</span></label>
+        <input type="text" id="idiomas" placeholder="Ej: Español (nativo), Inglés (B2), Francés (A2)"/>
+      </div>
+      <div class="field">
+        <label>Certificados y cursos <span class="label-hint">(opcional)</span></label>
+        <textarea id="certificados" placeholder="Ej: Google Analytics Individual Qualification (2024)&#10;Curso de Python — Coursera (2023)&#10;Certificación en Marketing Digital — HubSpot (2023)" style="min-height:80px;"></textarea>
+      </div>
+      <div class="field">
+        <label>Proyectos propios <span class="label-hint">(opcional)</span></label>
+        <textarea id="proyectos" placeholder="Ej: App de gestión de tareas en React — proyecto personal disponible en GitHub&#10;Blog técnico sobre desarrollo web con 500 lectores mensuales" style="min-height:80px;"></textarea>
+      </div>
+      <div class="field">
+        <label>Concursos, hackathons y eventos <span class="label-hint">(opcional)</span></label>
+        <textarea id="concursos" placeholder="Ej: 2º puesto en Hackathon de IA — Universidad Politécnica (2024)&#10;Participante en Google Summer of Code (2023)&#10;Asistente a la conferencia JSDay España (2023)" style="min-height:80px;"></textarea>
+      </div>
+      <div class="field">
+        <label>Voluntariado y actividades extracurriculares <span class="label-hint">(opcional)</span></label>
+        <textarea id="voluntariado" placeholder="Ej: Voluntario en Cruz Roja — apoyo digital a personas mayores (2022-2023)&#10;Delegado de curso — Universidad (2021-2023)" style="min-height:80px;"></textarea>
+      </div>
+      <div class="field">
+        <label>Logros destacados <span class="label-hint">(opcional pero muy recomendable)</span></label>
+        <textarea id="logros" placeholder="Ej: Reduje el tiempo de carga de la web un 60%. Premio al mejor TFG de la promoción. Beca de excelencia académica." style="min-height:80px;"></textarea>
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-secondary" onclick="goToStep(2)">← Atrás</button>
+      <button class="btn-primary" onclick="goToStep(4)">Siguiente →</button>
+    </div>
+  </div>
+
+  <!-- STEP 4: Tono -->
+  <div class="step" id="step4">
+    <div class="card">
+      <div class="field">
+        <label>¿Qué tono quieres para tu CV?</label>
+        <div class="tone-grid" id="toneGrid">
+          <div class="tone-option selected" onclick="selectTone(this,'Profesional y directo')">
+            <div class="tone-name">Profesional</div>
+            <div class="tone-desc">Formal y conciso</div>
+          </div>
+          <div class="tone-option" onclick="selectTone(this,'Dinámico y orientado a resultados')">
+            <div class="tone-name">Dinámico</div>
+            <div class="tone-desc">Enérgico y con impacto</div>
+          </div>
+          <div class="tone-option" onclick="selectTone(this,'Creativo y original')">
+            <div class="tone-name">Creativo</div>
+            <div class="tone-desc">Para sectores creativos</div>
+          </div>
+          <div class="tone-option" onclick="selectTone(this,'Técnico y detallado')">
+            <div class="tone-name">Técnico</div>
+            <div class="tone-desc">Para perfiles IT</div>
+          </div>
+          <div class="tone-option" onclick="selectTone(this,'Cercano y humano')">
+            <div class="tone-name">Cercano</div>
+            <div class="tone-desc">Para startups y ONGs</div>
+          </div>
+          <div class="tone-option" onclick="selectTone(this,'Ejecutivo y estratégico')">
+            <div class="tone-name">Ejecutivo</div>
+            <div class="tone-desc">Para cargos directivos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-secondary" onclick="goToStep(3)">← Atrás</button>
+      <button class="btn-primary" id="generateBtn" onclick="generateCV()">Generar mi CV →</button>
+    </div>
+  </div>
+
+  <!-- LOADING -->
+  <div class="loading-state" id="loadingState">
+    <div class="spinner"></div>
+    <div class="loading-text">La IA está redactando tu CV...<br><span style="font-size:0.82rem;opacity:0.6;">Esto tarda unos 15 segundos</span></div>
+  </div>
+
+  <!-- RESULT -->
+  <div class="result-section" id="resultSection">
+    <div class="result-header">
+      <div class="result-title">Tu CV está listo</div>
+      <div class="result-actions">
+        <button class="btn-download" onclick="downloadCV()">Descargar .txt</button>
+        <button class="btn-copy" onclick="copyCV()">Copiar texto</button>
+      </div>
+    </div>
+    <div class="cv-output" id="cvOutput"></div>
+    <div class="copy-toast" id="copyToast">Copiado al portapapeles</div>
+
+    <div class="analyze-cta">
+      <p>Ahora analiza tu CV contra ofertas reales para ver qué keywords te faltan.</p>
+      <a href="/">Analizar compatibilidad →</a>
+    </div>
+
+    <button class="new-cv-btn" onclick="resetForm()">← Generar otro CV</button>
+  </div>
+
+  <footer style="margin-top:3rem;">© 2026 AnalizaCV · <a class="fl" href="/">Inicio</a> · <a class="fl" href="/blog">Blog</a> · <a class="fl" href="/privacidad">Privacidad</a></footer>
+</div>
+
+<script>
+  let currentStep = 1;
+  let selectedTone = 'Profesional y directo';
+  let generatedCV = '';
+
+  const stepLabels = [
+    '', 'Paso 1 de 4 — Información básica',
+    'Paso 2 de 4 — Experiencia y formación',
+    'Paso 3 de 4 — Habilidades, certificados y extras',
+    'Paso 4 de 4 — Tono del CV'
+  ];
+
+  function goToStep(n) {
+    if (n > currentStep) {
+      if (currentStep === 1) {
+        const nombre = document.getElementById('nombre').value.trim();
+        const puesto = document.getElementById('puesto').value.trim();
+        if (!nombre || !puesto) {
+          showError('Por favor, rellena tu nombre y el puesto al que aspiras.');
+          return;
+        }
+      }
+    }
+    hideError();
+    document.getElementById('step' + currentStep).classList.remove('active');
+    document.getElementById('step' + n).classList.add('active');
+    currentStep = n;
+    updateProgress();
+  }
+
+  function updateProgress() {
+    document.getElementById('stepLabel').textContent = stepLabels[currentStep];
+    for (let i = 1; i <= 4; i++) {
+      const el = document.getElementById('ps' + i);
+      el.className = 'progress-step' + (i < currentStep ? ' done' : i === currentStep ? ' active' : '');
+    }
+  }
+
+  function selectTone(el, tone) {
+    document.querySelectorAll('.tone-option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedTone = tone;
+  }
+
+  async function generateCV() {
+    const btn = document.getElementById('generateBtn');
+    btn.disabled = true;
+    hideError();
+
+    document.getElementById('step4').classList.remove('active');
+    document.getElementById('loadingState').classList.add('visible');
+
+    const body = {
+      nombre: document.getElementById('nombre').value.trim(),
+      puesto: document.getElementById('puesto').value.trim(),
+      experiencia: document.getElementById('experiencia').value.trim(),
+      practicas: document.getElementById('practicas').value.trim(),
+      formacion: document.getElementById('formacion').value.trim(),
+      habilidades: document.getElementById('habilidades').value.trim(),
+      idiomas: document.getElementById('idiomas').value.trim(),
+      certificados: document.getElementById('certificados').value.trim(),
+      proyectos: document.getElementById('proyectos').value.trim(),
+      concursos: document.getElementById('concursos').value.trim(),
+      voluntariado: document.getElementById('voluntariado').value.trim(),
+      logros: document.getElementById('logros').value.trim(),
+      tono: selectedTone,
+      experienciaAnos: document.getElementById('experienciaAnos').value
+    };
+
+    try {
+      const response = await fetch('/api/generate-cv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+
+      const data = await response.json();
+
+      if (response.status === 429) {
+        document.getElementById('loadingState').classList.remove('visible');
+        document.getElementById('step4').classList.add('active');
+        showError(data.error);
+        btn.disabled = false;
+        return;
+      }
+
+      if (!response.ok) throw new Error(data.error || 'Error desconocido');
+
+      generatedCV = data.cv;
+      document.getElementById('cvOutput').textContent = generatedCV;
+      document.getElementById('loadingState').classList.remove('visible');
+      document.getElementById('resultSection').classList.add('visible');
+      document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
+
+    } catch (err) {
+      document.getElementById('loadingState').classList.remove('visible');
+      document.getElementById('step4').classList.add('active');
+      showError('Error al generar el CV. Inténtalo de nuevo.');
+      btn.disabled = false;
+    }
+  }
+
+  function copyCV() {
+    navigator.clipboard.writeText(generatedCV).then(() => {
+      const toast = document.getElementById('copyToast');
+      toast.classList.add('visible');
+      setTimeout(() => toast.classList.remove('visible'), 2500);
+    });
+  }
+
+  function downloadCV() {
+    const nombre = document.getElementById('nombre').value.trim().replace(/\s+/g, '_');
+    const blob = new Blob([generatedCV], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `CV_${nombre}.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function resetForm() {
+    document.getElementById('resultSection').classList.remove('visible');
+    currentStep = 1;
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    document.getElementById('step1').classList.add('active');
+    document.getElementById('generateBtn').disabled = false;
+    updateProgress();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showError(msg) {
+    const el = document.getElementById('errorMsg');
+    el.textContent = msg;
+    el.classList.add('visible');
+  }
+
+  function hideError() {
+    document.getElementById('errorMsg').classList.remove('visible');
+  }
+</script>
+</body>
+</html>

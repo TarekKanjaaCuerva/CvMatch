@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9577192747616184" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRZ2ZWPS6L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XRZ2ZWPS6L');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnalizaCV — Verificador y Generador de Currículum con IA gratis</title>
+  <meta name="description" content="Herramienta gratuita para verificar tu currículum y obtener una puntuación ATS. Detecta las palabras clave que te faltan, analiza la compatibilidad con ofertas de empleo y genera tu currículum con IA." />
+  <meta name="keywords" content="verificador currículum, puntuación ATS, herramienta cv, generador currículum, analizar cv, palabras clave cv, revisión currículum, herramientas empleo, currículums gratis" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://analizacv.com/" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://analizacv.com/" />
+  <meta property="og:title" content="AnalizaCV — Verificador y Generador de Currículum con IA gratis" />
+  <meta property="og:description" content="Verifica tu currículum y obtén una puntuación ATS en segundos. Herramienta gratuita para detectar palabras clave, analizar compatibilidad con ofertas de empleo y generar currículums con IA." />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="AnalizaCV — Verificador y Generador de Currículum con IA gratis" />
+  <meta name="twitter:description" content="Verifica tu currículum y obtén una puntuación ATS en segundos. Herramienta gratuita para detectar palabras clave y generar currículums con IA." />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AnalizaCV",
+    "url": "https://analizacv.com",
+    "description": "Herramienta gratuita para verificar currículums, obtener puntuación ATS y detectar palabras clave. Generador de currículum con IA para ofertas de empleo.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "inLanguage": "es"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #1D9E75;
+      --green-dark: #0F6E56;
+      --green-darkest: #085041;
+      --green-light: #E1F5EE;
+      --red-light: #FCEBEB;
+      --red-dark: #791F1F;
+      --amber: #BA7517;
+      --bg: #F8F7F4;
+      --surface: #FFFFFF;
+      --border: rgba(0,0,0,0.1);
+      --text: #1a1a18;
+      --text-muted: #6b6b67;
+      --text-hint: #9a9a96;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141413;
+        --surface: #1e1e1c;
+        --border: rgba(255,255,255,0.1);
+        --text: #f0ede8;
+        --text-muted: #9a9a96;
+        --text-hint: #6b6b67;
+        --green-light: #04342C;
+        --red-light: #501313;
+        --red-dark: #F7C1C1;
+      }
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .logo span { color: var(--green); }
+
+    .tagline {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    /* INPUT GRID */
+    .input-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .input-grid { grid-template-columns: 1fr; }
+      .logo { font-size: 2rem; }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+    }
+
+    .card-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--text-hint);
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-label .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    /* TABS */
+    .tabs {
+      display: flex;
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 0.9rem;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 0.45rem 0.5rem;
+      font-size: 0.78rem;
+      font-family: 'DM Sans', sans-serif;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .tab.active {
+      background: var(--green);
+      color: white;
+      font-weight: 500;
+    }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    textarea {
+      width: 100%;
+      border: none;
+      background: transparent;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      color: var(--text);
+      resize: none;
+      outline: none;
+      line-height: 1.65;
+      min-height: 180px;
+    }
+
+    textarea::placeholder { color: var(--text-hint); }
+
+    /* DROP ZONE */
+    .drop-zone {
+      border: 1.5px dashed var(--border);
+      border-radius: var(--radius-md);
+      padding: 2rem 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .drop-zone:hover, .drop-zone.dragover {
+      border-color: var(--green);
+      background: var(--green-light);
+    }
+
+    .drop-zone svg { opacity: 0.35; }
+
+    .drop-zone p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .drop-zone p strong { color: var(--green); font-weight: 500; }
+    .drop-zone .hint { font-size: 0.72rem; opacity: 0.55; }
+
+    input[type="file"] { display: none; }
+
+    .file-badge {
+      display: none;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 0.8rem;
+      background: var(--green-light);
+      border-radius: var(--radius-md);
+      margin-top: 0.6rem;
+    }
+
+    .file-badge.visible { display: flex; }
+
+    .file-badge .name {
+      font-size: 0.82rem;
+      color: var(--green-darkest);
+      font-weight: 500;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .file-badge button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--green-dark);
+      font-size: 1rem;
+      line-height: 1;
+      padding: 0 2px;
+    }
+
+    /* ANALYZE BUTTON */
+    .analyze-btn {
+      width: 100%;
+      padding: 1rem;
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.1s;
+      margin-bottom: 1rem;
+    }
+
+    .analyze-btn:hover { background: var(--green-dark); }
+    .analyze-btn:active { transform: scale(0.99); }
+    .analyze-btn:disabled {
+      background: var(--border);
+      color: var(--text-hint);
+      cursor: not-allowed;
+    }
+
+    /* ERROR */
+    .error-msg {
+      background: var(--red-light);
+      color: var(--red-dark);
+      padding: 0.9rem 1.2rem;
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .error-msg.visible { display: block; }
+
+    /* RESULTS */
+    .results { display: none; }
+    .results.visible { display: block; }
+
+    .score-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .metric {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .metric-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .metric-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .metric-value.good { color: var(--green); }
+    .metric-value.mid { color: var(--amber); }
+    .metric-value.bad { color: #A32D2D; }
+
+    .section {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .analysis-text {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+      white-space: pre-wrap;
+    }
+
+    .keywords-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .keyword {
+      font-size: 0.78rem;
+      padding: 4px 11px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .keyword.present { background: var(--green-light); color: var(--green-darkest); }
+    .keyword.missing { background: var(--red-light); color: var(--red-dark); }
+
+    /* BLOG SECTION */
+    .blog-section {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .blog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.2rem;
+    }
+
+    .blog-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .blog-header a {
+      font-size: 0.82rem;
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .blog-header a:hover { text-decoration: underline; }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 560px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+
+    .blog-card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1rem 1.25rem;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.15s;
+    }
+
+    .blog-card:hover { border-color: var(--green); }
+
+    .blog-card-tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--green);
+      margin-bottom: 0.3rem;
+    }
+
+    .blog-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.35;
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .stat-item {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .stat-item .stat-number {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-item .stat-desc {
+      font-size: 0.72rem;
+      color: var(--text-hint);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* HOW IT WORKS */
+    .how-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .how-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-hint);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 560px) {
+      .how-steps { grid-template-columns: 1fr; }
+      .stats-bar { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .how-step {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .how-step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .how-step-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .how-step-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* REMAINING USES */
+    .remaining-bar {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      background: var(--green-light);
+      border-radius: var(--radius-md);
+      margin-bottom: 0.75rem;
+      font-size: 0.82rem;
+      color: var(--green-darkest);
+    }
+
+    .remaining-bar.visible { display: flex; }
+    .remaining-bar.warning { background: #FFF3CD; color: #856404; }
+
+    /* TESTIMONIALS */
+    .testimonials {
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .testimonials-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-hint);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 640px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
+    .testimonial {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .testimonial-stars {
+      color: var(--green);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-style: italic;
+      flex: 1;
+    }
+
+    .testimonial-author {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .testimonial-role {
+      font-size: 0.72rem;
+      color: var(--text-hint);
+    }
+
+    /* SHARE BUTTON */
+    .share-btn {
+      width: 100%;
+      padding: 0.75rem;
+      background: transparent;
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-md);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      margin-top: 0.75rem;
+      transition: background 0.15s, border-color 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .share-btn:hover { background: var(--bg); border-color: var(--green); color: var(--green); }
+
+    .share-toast {
+      display: none;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--green);
+      margin-top: 0.4rem;
+    }
+
+    .share-toast.visible { display: block; }
+
+
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.78rem;
+      color: var(--text-hint);
+    }
+
+    /* LOADING */
+    .dots {
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .dots span {
+      width: 6px; height: 6px;
+      background: white;
+      border-radius: 50%;
+      animation: bounce 1.2s infinite;
+    }
+
+    .dots span:nth-child(2) { animation-delay: 0.2s; }
+    .dots span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes bounce {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+      30% { transform: translateY(-5px); opacity: 1; }
+    }
+    /* NAV */
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .hamburger {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      border-radius: var(--radius-md);
+      transition: background 0.15s;
+    }
+
+    .hamburger:hover { background: var(--border); }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .drawer-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 99;
+    }
+
+    .drawer-overlay.open { display: block; }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 260px;
+      height: 100vh;
+      background: var(--surface);
+      border-left: 0.5px solid var(--border);
+      z-index: 100;
+      padding: 1.5rem;
+      transition: right 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drawer.open { right: 0; }
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .drawer-logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.03em;
+    }
+
+    .drawer-logo span { color: var(--green); }
+
+    .drawer-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: var(--text-hint);
+      padding: 4px;
+    }
+
+    .drawer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      flex: 1;
+    }
+
+    .drawer-nav a {
+      font-size: 0.95rem;
+      color: var(--text);
+      text-decoration: none;
+      padding: 0.7rem 0.8rem;
+      border-radius: var(--radius-md);
+      transition: background 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .drawer-nav a:hover { background: var(--bg); }
+
+    .drawer-nav a .nav-icon { font-size: 1rem; opacity: 0.6; }
+
+    .drawer-divider {
+      border: none;
+      border-top: 0.5px solid var(--border);
+      margin: 0.75rem 0;
+    }
+
+    .drawer-footer {
+      font-size: 0.75rem;
+      color: var(--text-hint);
+      text-align: center;
+      padding-top: 1rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Drawer overlay -->
+  <div class="drawer-overlay" id="overlay" onclick="closeDrawer()"></div>
+
+  <!-- Side drawer -->
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <span class="drawer-logo">Analiza<span>CV</span></span>
+      <button class="drawer-close" onclick="closeDrawer()">✕</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="/"><span class="nav-icon">🏠</span> Inicio</a>
+      <a href="/generar-cv"><span class="nav-icon">✨</span> Generar CV con IA</a>
+      <a href="/como-funciona"><span class="nav-icon">💡</span> Cómo funciona</a>
+      <a href="/quienes-somos"><span class="nav-icon">👥</span> Quiénes somos</a>
+      <a href="/blog"><span class="nav-icon">📝</span> Blog</a>
+      <hr class="drawer-divider" />
+      <a href="/faq"><span class="nav-icon">❓</span> Preguntas frecuentes</a>
+      <a href="/contacto"><span class="nav-icon">✉️</span> Contacto</a>
+      <hr class="drawer-divider" />
+      <a href="/privacidad"><span class="nav-icon">🔒</span> Política de privacidad</a>
+    </nav>
+    <div class="drawer-footer">© 2026 AnalizaCV · Datos protegidos · Cookies según política</div>
+  </div>
+
+  <div class="container">
+    <div class="nav-bar">
+      <div class="logo">Analiza<span>CV</span></div>
+      <button class="hamburger" id="menuBtn" onclick="toggleDrawer()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <header>
+      <p class="tagline">Herramienta gratuita para verificar tu currículum y obtener una puntuación ATS. Detecta las palabras clave que te faltan, genera plantillas de currículum y mejora tu carta de presentación para cada oferta de empleo de empresas.</p>
+    </header>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number" id="analysisCount">12.847</div>
+        <div class="stat-desc">Currículums verificados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">30s</div>
+        <div class="stat-desc">Análisis y revisión</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-desc">Herramienta gratuita</div>
+      </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="how-section">
+      <div class="how-title">Cómo funciona el verificador de currículum</div>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-step-num">1</div>
+          <div class="how-step-title">Sube tu currículum</div>
+          <div class="how-step-desc">Pega el texto de tu currículum o sube tu PDF directamente.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">2</div>
+          <div class="how-step-title">Pega la oferta de la empresa</div>
+          <div class="how-step-desc">Copia la descripción completa de la oferta de empleo de la empresa.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">3</div>
+          <div class="how-step-title">Obtén tu puntuación</div>
+          <div class="how-step-desc">Puntuación ATS, palabras clave y consejos de revisión en segundos.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REMAINING USES -->
+    <div class="remaining-bar" id="remainingBar">
+      <span id="remainingText"></span>
+    </div>
+
+    <div class="input-grid">
+      <!-- CV -->
+      <div class="card">
+        <div class="card-label"><span class="dot"></span>Tu currículum</div>
+        <div class="tabs">
+          <button class="tab active" onclick="switchTab('text')">Pegar texto</button>
+          <button class="tab" onclick="switchTab('pdf')">Subir PDF</button>
+        </div>
+
+        <div class="tab-panel active" id="panel-text">
+          <textarea id="cv" placeholder="Pega aquí el texto de tu CV...&#10;&#10;Experiencia, habilidades, formación, etc."></textarea>
+        </div>
+
+        <div class="tab-panel" id="panel-pdf">
+          <div class="drop-zone" id="dropZone"
+            onclick="document.getElementById('fileInput').click()"
+            ondragover="onDragOver(event)"
+            ondragleave="onDragLeave(event)"
+            ondrop="onDrop(event)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="12" y1="18" x2="12" y2="12"/>
+              <line x1="9" y1="15" x2="15" y2="15"/>
+            </svg>
+            <p><strong>Haz clic o arrastra</strong> tu CV en PDF</p>
+            <p class="hint">Solo archivos .pdf · Máx. 5 MB</p>
+          </div>
+          <input type="file" id="fileInput" accept=".pdf" onchange="onFileSelect(event)" />
+          <div class="file-badge" id="fileBadge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--green); flex-shrink:0">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <span class="name" id="fileName"></span>
+            <button onclick="removeFile()" title="Quitar archivo">✕</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- OFERTA -->
+      <div class="card">
+        <div class="card-label"><span class="dot"></span>Oferta de trabajo</div>
+        <textarea id="job" placeholder="Pega aquí la descripción de la oferta de trabajo...&#10;&#10;Cuanto más completa, mejor será el análisis." style="min-height: 240px;"></textarea>
+      </div>
+    </div>
+
+    <div class="error-msg" id="error"></div>
+
+    <button class="analyze-btn" id="analyzeBtn" onclick="analyze()">
+      Verificar y analizar currículum
+    </button>
+
+    <div class="results" id="results">
+      <div class="score-row">
+        <div class="metric">
+          <div class="metric-label">Puntuación de compatibilidad</div>
+          <div class="metric-value" id="score">—</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Palabras clave presentes</div>
+          <div class="metric-value good" id="kwPresent">—</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Palabras clave faltantes</div>
+          <div class="metric-value bad" id="kwMissing">—</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Palabras clave detectadas en tu currículum</div>
+        <div class="keywords-wrap" id="keywordsWrap"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Revisión detallada de tu currículum</div>
+        <div class="analysis-text" id="analysisText"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Cómo mejorar tu currículum para esta oferta de empleo</div>
+        <div class="analysis-text" id="improvText"></div>
+      </div>
+
+      <button class="share-btn" onclick="shareResult()">
+        ↗ Compartir puntuación de mi currículum
+      </button>
+      <div class="share-toast" id="shareToast">Enlace copiado al portapapeles</div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="testimonials">
+      <div class="testimonials-title">Lo que dicen usuarios de nuestra herramienta de verificación de currículums</div>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"Llevaba meses mandando currículums sin respuesta. Usé el verificador de AnalizaCV y descubrí que me faltaban 8 palabras clave. La herramienta es increíble — a la semana ya tenía dos entrevistas."</div>
+          <div>
+            <div class="testimonial-author">Laura M.</div>
+            <div class="testimonial-role">Diseñadora UX, Madrid</div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"No sabía que existían los filtros ATS. Esta herramienta de revisión de currículums me abrió los ojos. Mi puntuación pasó de un 41% a un 78% con solo añadir las palabras clave correctas."</div>
+          <div>
+            <div class="testimonial-author">Carlos R.</div>
+            <div class="testimonial-role">Desarrollador Junior, Barcelona</div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"Lo recomiendo a todos los que buscan empleo. El verificador y generador de currículums es gratis, rápido y la revisión que hace la herramienta es muy detallada."</div>
+          <div>
+            <div class="testimonial-author">Ana G.</div>
+            <div class="testimonial-role">Recién graduada, Valencia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-section">
+      <div class="blog-header">
+        <h2>Guías, herramientas y plantillas para tu currículum y empleo</h2>
+        <a href="/blog">Ver todos →</a>
+      </div>
+      <div class="blog-grid">
+        <a class="blog-card" href="/blog/como-pasar-el-filtro-ats">
+          <div class="blog-card-tag">Guía completa</div>
+          <div class="blog-card-title">Cómo pasar el filtro ATS en 2026</div>
+        </a>
+        <a class="blog-card" href="/blog/keywords-importantes-cv">
+          <div class="blog-card-tag">Keywords</div>
+          <div class="blog-card-title">Las keywords más importantes para tu CV</div>
+        </a>
+        <a class="blog-card" href="/blog/errores-comunes-cv">
+          <div class="blog-card-tag">Consejos de CV</div>
+          <div class="blog-card-title">Los 10 errores más comunes en un CV</div>
+        </a>
+        <a class="blog-card" href="/blog/preparar-entrevista-trabajo">
+          <div class="blog-card-tag">Entrevistas</div>
+          <div class="blog-card-title">Cómo preparar una entrevista de trabajo</div>
+        </a>
+        <a class="blog-card" href="/blog/mejorar-perfil-linkedin">
+          <div class="blog-card-tag">LinkedIn</div>
+          <div class="blog-card-title">Cómo mejorar tu perfil de LinkedIn</div>
+        </a>
+        <a class="blog-card" href="/blog/salarios-espana-2026">
+          <div class="blog-card-tag">Salarios</div>
+          <div class="blog-card-title">Guía de salarios en España 2026</div>
+        </a>
+        <a class="blog-card" href="/blog/encontrar-trabajo-sin-experiencia">
+          <div class="blog-card-tag">Primer empleo</div>
+          <div class="blog-card-title">Cómo encontrar trabajo sin experiencia</div>
+        </a>
+        <a class="blog-card" href="/blog/conseguir-trabajo-remoto">
+          <div class="blog-card-tag">Trabajo remoto</div>
+          <div class="blog-card-title">Cómo conseguir un trabajo remoto</div>
+        </a>
+        <a class="blog-card" href="/blog/carta-de-presentacion">
+          <div class="blog-card-tag">Búsqueda de empleo</div>
+          <div class="blog-card-title">Cómo escribir una carta de presentación</div>
+        </a>
+        <a class="blog-card" href="/blog/cuando-cambiar-de-trabajo">
+          <div class="blog-card-tag">Cambio de trabajo</div>
+          <div class="blog-card-title">Cuándo y cómo cambiar de trabajo</div>
+        </a>
+      </div>
+    </div>
+
+    <footer style="text-align:center;margin-top:3rem;font-size:0.72rem;color:var(--text-hint);line-height:1.8;">AnalizaCV · Verificador y generador de currículums gratuito · Tus datos no se almacenan · Usamos cookies según nuestra <a href="/privacidad" style="color: var(--text-hint); text-decoration: none;">Política de Privacidad</a></footer>
+  </div>
+
+  <script>
+    let activeTab = 'text';
+    let pdfBase64 = null;
+
+    function switchTab(tab) {
+      activeTab = tab;
+      document.querySelectorAll('.tab').forEach((t, i) => {
+        t.classList.toggle('active', (i === 0 && tab === 'text') || (i === 1 && tab === 'pdf'));
+      });
+      document.getElementById('panel-text').classList.toggle('active', tab === 'text');
+      document.getElementById('panel-pdf').classList.toggle('active', tab === 'pdf');
+    }
+
+    function onDragOver(e) {
+      e.preventDefault();
+      document.getElementById('dropZone').classList.add('dragover');
+    }
+
+    function onDragLeave() {
+      document.getElementById('dropZone').classList.remove('dragover');
+    }
+
+    function onDrop(e) {
+      e.preventDefault();
+      document.getElementById('dropZone').classList.remove('dragover');
+      const file = e.dataTransfer.files[0];
+      if (file && file.type === 'application/pdf') loadPDF(file);
+    }
+
+    function onFileSelect(e) {
+      const file = e.target.files[0];
+      if (file) loadPDF(file);
+    }
+
+    function loadPDF(file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        pdfBase64 = e.target.result.split(',')[1];
+        document.getElementById('fileName').textContent = file.name;
+        document.getElementById('fileBadge').classList.add('visible');
+        document.getElementById('dropZone').style.opacity = '0.5';
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function removeFile() {
+      pdfBase64 = null;
+      document.getElementById('fileBadge').classList.remove('visible');
+      document.getElementById('dropZone').style.opacity = '1';
+      document.getElementById('fileInput').value = '';
+    }
+
+    async function analyze() {
+      const job = document.getElementById('job').value.trim();
+      const cvText = document.getElementById('cv').value.trim();
+      const btn = document.getElementById('analyzeBtn');
+      const errorEl = document.getElementById('error');
+      const results = document.getElementById('results');
+
+      errorEl.classList.remove('visible');
+      results.classList.remove('visible');
+
+      if (!job) return showError('Por favor, pega la descripción de la oferta de trabajo.');
+      if (activeTab === 'pdf' && !pdfBase64) return showError('Por favor, sube tu CV en formato PDF.');
+      if (activeTab === 'text' && !cvText) return showError('Por favor, pega el texto de tu CV.');
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="dots"><span></span><span></span><span></span></span>';
+
+      try {
+        const response = await fetch('/api/analyze', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            cvText: activeTab === 'text' ? cvText : null,
+            pdfBase64: activeTab === 'pdf' ? pdfBase64 : null,
+            jobText: job
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.status === 429) {
+          showError(data.error);
+          btn.disabled = false;
+          btn.innerHTML = 'Verificar y analizar currículum';
+          return;
+        }
+
+        if (!response.ok) throw new Error(data.error || 'Error desconocido');
+
+        const score = data.score;
+        const scoreEl = document.getElementById('score');
+        scoreEl.textContent = score + '%';
+        scoreEl.className = 'metric-value ' + (score >= 70 ? 'good' : score >= 45 ? 'mid' : 'bad');
+
+        document.getElementById('kwPresent').textContent = data.keywords_present.length;
+        document.getElementById('kwMissing').textContent = data.keywords_missing.length;
+
+        const wrap = document.getElementById('keywordsWrap');
+        wrap.innerHTML = '';
+        data.keywords_present.forEach(k => {
+          const el = document.createElement('span');
+          el.className = 'keyword present';
+          el.textContent = k;
+          wrap.appendChild(el);
+        });
+        data.keywords_missing.forEach(k => {
+          const el = document.createElement('span');
+          el.className = 'keyword missing';
+          el.textContent = k;
+          wrap.appendChild(el);
+        });
+
+        document.getElementById('analysisText').textContent = data.analysis;
+        document.getElementById('improvText').textContent = data.improvements;
+        updateRemaining(data.remaining);
+        results.classList.add('visible');
+        results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      } catch (err) {
+        showError('Error al analizar. Inténtalo de nuevo.');
+      }
+
+      btn.disabled = false;
+      btn.innerHTML = 'Verificar y analizar currículum';
+    }
+
+    function showError(msg) {
+      const el = document.getElementById('error');
+      el.textContent = msg;
+      el.classList.add('visible');
+    }
+
+    function updateRemaining(remaining) {
+      const bar = document.getElementById('remainingBar');
+      const text = document.getElementById('remainingText');
+      if (remaining !== undefined && remaining !== null) {
+        bar.classList.add('visible');
+        if (remaining <= 1) {
+          bar.classList.add('warning');
+          text.textContent = remaining === 0
+            ? 'Has usado todos tus análisis por hoy. Vuelve en 1 hora.'
+            : `Te queda ${remaining} análisis gratuito esta hora.`;
+        } else {
+          bar.classList.remove('warning');
+          text.textContent = `Te quedan ${remaining} análisis gratuitos esta hora.`;
+        }
+      }
+    }
+
+    function shareResult() {
+      const score = document.getElementById('score').textContent;
+      const text = `Acabo de analizar mi CV con AnalizaCV y tengo un ${score} de compatibilidad. ¿Cuánto tienes tú? Pruébalo gratis en analizacv.com`;
+      if (navigator.share) {
+        navigator.share({ title: 'Mi resultado en AnalizaCV', text, url: 'https://analizacv.com' });
+      } else {
+        navigator.clipboard.writeText('https://analizacv.com').then(() => {
+          const toast = document.getElementById('shareToast');
+          toast.classList.add('visible');
+          setTimeout(() => toast.classList.remove('visible'), 2500);
+        });
+      }
+    }
+
+    function animateCounter(el, target) {
+      let current = Math.max(0, target - 200);
+      const step = Math.ceil((target - current) / 40);
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = current.toLocaleString('es-ES');
+        if (current >= target) clearInterval(timer);
+      }, 30);
+    }
+
+    window.addEventListener('load', () => {
+      const el = document.getElementById('analysisCount');
+      animateCounter(el, 12847);
+    });
+
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('overlay');
+      const btn = document.getElementById('menuBtn');
+      drawer.classList.toggle('open');
+      overlay.classList.toggle('open');
+      btn.classList.toggle('open');
+    }
+
+    function closeDrawer() {
+      document.getElementById('drawer').classList.remove('open');
+      document.getElementById('overlay').classList.remove('open');
+      document.getElementById('menuBtn').classList.remove('open');
+    }
+  </script>
+</body>
+</html>
